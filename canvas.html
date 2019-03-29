@@ -45,9 +45,13 @@
 			draw();
 		})
 
-		window.addEventListener('ontouchmove', function (t) {
-			console.log(e.pageX);
-			console.log(e.pageY);
+		window.addEventListener('touchmove', function (t) {
+			x = t.pageX;
+			y = t.pageY;
+			draw();
+		})
+
+		window.addEventListener('touchstart', function (t) {
 			x = t.pageX;
 			y = t.pageY;
 			draw();
@@ -86,6 +90,10 @@
 		window.addEventListener('input', function (e) {
 			var c = document.querySelector("#cp");
 			color = c.value;
+		})
+
+		window.addEventListener('orientationchange', function (o) {
+			window.location.reload(); 
 		})
 
 
