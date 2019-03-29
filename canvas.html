@@ -52,13 +52,6 @@
 			draw();
 		},false)
 
-		// window.addEventListener('touchstart', function (t) {
-		// 	x = t.pageX;
-		// 	y = t.pageY;
-		// 	draw();
-		// },false)
-
-
 		window.addEventListener('keydown', function (k) {
 			if (k.key == "b") {
 				color = "blue"
@@ -83,7 +76,7 @@
 				}
 			}
 			else if (k.key == " ") {
-				ctx.clearRect(0, 0, 600, 600);
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
 			}
 			console.log(k.key)
 		})
